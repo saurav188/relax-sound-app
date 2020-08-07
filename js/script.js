@@ -36,11 +36,12 @@ function playing_audio(event){
             each.classList.add('no-input');
             each.classList.add('no-input');
         });
-        meditation_sound_duration=event.target.parentNode.children[0].duration;
+        meditation_sound_duration=Math.floor(event.target.parentNode.children[0].duration);
         //meditation_sound_duration=2;
-        duration_to_show=event.target.parentNode.children[3].value;
+        duration_to_show=Math.floor(event.target.parentNode.children[3].value);
         no_of_recursion=Math.floor(duration_to_show/meditation_sound_duration);
-        extra_time_to_play=duration_to_show%meditation_sound_duration;
+        initial_no_of_recursion=no_of_recursion;
+        extra_time_to_play=Math.floor(duration_to_show%meditation_sound_duration);
         let continue_function=setInterval(()=>continue_playing(event,continue_function),100);
     };
     play_pause(event);
@@ -52,7 +53,7 @@ function continue_playing(event,continue_function){
     hour=event.target.parentNode.children[5];
     minute=event.target.parentNode.children[6];
     second=event.target.parentNode.children[7];
-    range.value=duration_to_show-Math.floor(event.target.parentNode.children[0].currentTime);
+    range.value=duration_to_show-(((initial_no_of_recursion-no_of_recursion)*meditation_sound_duration)+Math.floor(event.target.parentNode.children[0].currentTime));
     hour.value=Math.floor(range.value/3600);
     minute.value=Math.floor((range.value%3600)/60);
     second.value=range.value%60;
