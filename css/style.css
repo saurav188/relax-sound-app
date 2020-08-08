@@ -12,6 +12,7 @@ body {
   font-weight: lighter;
   font: lighter;
   color: gray;
+  margin-bottom: 2rem;
 }
 
 .title-container h1 {
@@ -37,7 +38,7 @@ body {
   pointer-events: none;
   font-size: 1.5rem;
   letter-spacing: 1px;
-  word-spacing: 1rem;
+  word-spacing: 5rem;
   font-weight: bolder;
   color: #cecbcb;
   height: 86.5rem;
