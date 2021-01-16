@@ -72,13 +72,6 @@ body{
                 background: white;
                 cursor: pointer;
             }
-              
-            &::-moz-range-thumb {
-                width: 25px;
-                height: 25px;
-                background: #4CAF50;
-                cursor: pointer;
-            }
         }
         input[type='number']{
             background: transparent;
@@ -146,7 +139,7 @@ body{
     box-shadow: -6px -6px 6px black,
                 6px 6px 6px rgb(52,57,62) ;
     &:active{
-        color: lightblue;
+        color: white;
     }
     
 }

@@ -87,13 +87,6 @@ body {
   cursor: pointer;
 }
 
-.sound-container .sound input[type="range"]::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
-  background: #4CAF50;
-  cursor: pointer;
-}
-
 .sound-container .sound input[type='number'] {
   background: transparent;
   border: none;
@@ -170,7 +163,7 @@ body {
 }
 
 .feedback-btn:active, .back-btn:active {
-  color: lightblue;
+  color: white;
 }
 
 .feedback-message {
