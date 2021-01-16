@@ -2,7 +2,7 @@ body{
     margin: none;
     padding: none;
     box-sizing: border-box;
-    background-color: rgb(230, 230, 230);
+    background-image:linear-gradient(to bottom left,rgb(52,57,62),black);
 }
 
 .title-container{
@@ -10,52 +10,28 @@ body{
     text-align: center;
     font-weight: lighter;
     font: lighter;
-    color:  rgb(128, 128, 128);
+    color: white;
     margin-bottom: 2rem;
     
     h1{
         transform-origin: center center;
         transform: translate(0px,25%);
         font-size: 2.75rem;
-        text-shadow: -2px -2px 3px rgb(245, 244, 244),
-                    2px 2px 3px gray;
         margin-bottom: 0px;
     }
     p{
-        color: rgb(145, 143, 143);
+        color: rgb(177, 176, 176);
         margin-top: 1rem;
         font-size: 1.5rem;
-        text-shadow: -1px -1px 1.5px rgb(245, 244, 244),
-        1px 1px 1.5px gray;
     }
 }
-
-.background-text{
-    position: absolute;
-    z-index: -1;
-    pointer-events: none;
-    font-size: 1.5rem;
-    letter-spacing: 1px;
-    word-spacing: 5rem;
-    font-weight: bolder;
-    color: rgb(206, 203, 203);
-    height: 86.5rem;
-    overflow-y: hidden;
-    top: 0px;
-    opacity: 0.75;
-    left: 0px;
-    right: 0px;
-    min-width: 100%;
-    background-image: linear-gradient(to bottom,darkgray,white);
-}
-
 .sound-container{
     text-align: center;
 
     .sound{
         margin-bottom:20px ;
         color: rgb(128, 128, 128);
-        background-color:rgb(206, 203, 203);
+        background-image:linear-gradient(to top left, rgb(52,57,62), black);
         max-width: 25rem;
         min-width: 20rem;
         min-height: 7.5rem;
@@ -63,18 +39,46 @@ body{
         border-radius: 10px;
         margin-left: auto;
         margin-right: auto;
-        box-shadow: -5px -5px 7.5px rgb(245, 244, 244),
-                    5px 5px 7.5px darkgray;
+        box-shadow: -5px -5px 7.5px,rgb(88, 90, 92),
+                    5px 5px 7.5px black;
         animation: show-container-animated 500ms;
 
         label{
-            color:black;
+            color:white;
             font-size: 1.125rem;
         }
         input[type="range"]{
             width: 90%;
             background: gray;
             outline: none;
+            -webkit-appearance: none;
+            width: 100%;
+            height: 5px;
+            background: lightgray;
+            outline: none;
+            border-radius: 41px;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+            &:hover {
+                background-color: white;
+            }
+              
+            &::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background: white;
+                cursor: pointer;
+            }
+              
+            &::-moz-range-thumb {
+                width: 25px;
+                height: 25px;
+                background: #4CAF50;
+                cursor: pointer;
+            }
         }
         input[type='number']{
             background: transparent;
@@ -88,24 +92,25 @@ body{
             &:focus{
                 border: none;
                 outline: none;
-                border-bottom: 2px solid gray;
+                border-bottom: 2px solid white;
+                color:white;
             }
         }
         button{
             cursor: pointer;
             outline: none;
-            border: none;
-            background-color: lightgray;
+            border: none;       
+            background-image:linear-gradient(to top left,black, rgb(52,57,62) );
             color: gray;
             border-radius: 5px;
             margin-left: 10px;
             margin-top: 20px;
             padding: 5px 10px 5px 10px;
-            box-shadow: -3px -3px 4.5px rgb(231, 230, 230),
-                        3px 3px 4.5px darkgray;
+            box-shadow: -3px -3px 4.5px black,
+                        3px 3px 4.5px rgb(52,57,62) ;
 
             &:active{
-                color: lightblue;
+                color:white;
             }
         }
     }
@@ -127,7 +132,7 @@ body{
 }
 .feedback-btn,.back-btn{
     cursor: pointer;
-    background-color:lightgray;
+    background-image:linear-gradient(to top left,black, rgb(52,57,62) );
     border: gray;
     color: gray;
     border-radius: 4px;
@@ -136,9 +141,10 @@ body{
     transform-origin: center center;
     margin-top: 2rem;
     margin-left: 50%;
+    margin-bottom: 3rem;
     transform: translateX(-50%);
-    box-shadow:-5px -5px 7.5px rgb(255, 255, 255),
-                5px 5px 7.5px gray;
+    box-shadow: -6px -6px 6px black,
+                6px 6px 6px rgb(52,57,62) ;
     &:active{
         color: lightblue;
     }
